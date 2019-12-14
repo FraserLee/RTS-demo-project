@@ -3,9 +3,12 @@
 public class Highlighter : MonoBehaviour
 {
 	public GameObject highlightGameObject;
-	[HideInInspector]
-	public bool highlighted = false;
 
+	private bool highlighted = false;
+	
+	public bool IsHighlighted(){
+		return highlighted;
+	}
 	void Start(){
 		highlightGameObject.SetActive(highlighted);
 	}
